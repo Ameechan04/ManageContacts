@@ -9,7 +9,7 @@ namespace ManageContactsLocal
 {
     public static class Database
     {
-        private static string connectionString = "Server=devweb2024.cis.strath.ac.uk;Database=xmb22143;User ID=xmb22143;Password=Obu7ooshaich;SslMode=none;";
+        private static string connectionString = "Server=devweb2024.cis.strath.ac.uk;Database=xmb22143;User ID=xmb22143;Password="+getPassword()+";SslMode=none;";
 
         // Method to get the MySQL connection
         public static MySqlConnection GetConnection()
@@ -45,5 +45,11 @@ namespace ManageContactsLocal
                 }
             }
         }
+        //TODO remove forupload
+        private static string getPassword()
+        {
+            return "Obu7ooshaich";
+        }
     }
+     
 }

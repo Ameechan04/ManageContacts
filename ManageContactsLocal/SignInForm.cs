@@ -24,6 +24,9 @@ namespace ManageContactsLocal
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Proceed to the next screen
+                MainForm mainForm = new MainForm(username);
+                this.Hide();
+                mainForm.Show();
             }
             else
             {
